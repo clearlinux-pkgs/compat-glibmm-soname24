@@ -4,7 +4,7 @@
 #
 Name     : compat-glibmm-soname24
 Version  : 2.64.2
-Release  : 20
+Release  : 21
 URL      : https://download.gnome.org/sources/glibmm/2.64/glibmm-2.64.2.tar.xz
 Source0  : https://download.gnome.org/sources/glibmm/2.64/glibmm-2.64.2.tar.xz
 Summary  : C++ wrapper for GLib
@@ -78,7 +78,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1611164666
+export SOURCE_DATE_EPOCH=1611165224
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -98,7 +98,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make test || :
 
 %install
-export SOURCE_DATE_EPOCH=1611164666
+export SOURCE_DATE_EPOCH=1611165224
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/compat-glibmm-soname24
 cp %{_builddir}/glibmm-2.64.2/COPYING %{buildroot}/usr/share/package-licenses/compat-glibmm-soname24/10b7ed0f3f2cfe72fe0c64c167033cbbf8e62d93
