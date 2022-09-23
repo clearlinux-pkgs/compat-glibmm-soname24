@@ -4,7 +4,7 @@
 #
 Name     : compat-glibmm-soname24
 Version  : 2.64.2
-Release  : 22
+Release  : 23
 URL      : https://download.gnome.org/sources/glibmm/2.64/glibmm-2.64.2.tar.xz
 Source0  : https://download.gnome.org/sources/glibmm/2.64/glibmm-2.64.2.tar.xz
 Summary  : C++ wrapper for GLib
