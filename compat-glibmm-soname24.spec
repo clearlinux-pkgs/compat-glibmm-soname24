@@ -4,7 +4,7 @@
 #
 Name     : compat-glibmm-soname24
 Version  : 2.64.2
-Release  : 23
+Release  : 24
 URL      : https://download.gnome.org/sources/glibmm/2.64/glibmm-2.64.2.tar.xz
 Source0  : https://download.gnome.org/sources/glibmm/2.64/glibmm-2.64.2.tar.xz
 Summary  : C++ wrapper for GLib
@@ -78,15 +78,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1611165224
+export SOURCE_DATE_EPOCH=1664141290
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -98,11 +98,11 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make test || :
 
 %install
-export SOURCE_DATE_EPOCH=1611165224
+export SOURCE_DATE_EPOCH=1664141290
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/compat-glibmm-soname24
-cp %{_builddir}/glibmm-2.64.2/COPYING %{buildroot}/usr/share/package-licenses/compat-glibmm-soname24/10b7ed0f3f2cfe72fe0c64c167033cbbf8e62d93
-cp %{_builddir}/glibmm-2.64.2/COPYING.tools %{buildroot}/usr/share/package-licenses/compat-glibmm-soname24/06877624ea5c77efe3b7e39b0f909eda6e25a4ec
+cp %{_builddir}/glibmm-%{version}/COPYING %{buildroot}/usr/share/package-licenses/compat-glibmm-soname24/10b7ed0f3f2cfe72fe0c64c167033cbbf8e62d93 || :
+cp %{_builddir}/glibmm-%{version}/COPYING.tools %{buildroot}/usr/share/package-licenses/compat-glibmm-soname24/06877624ea5c77efe3b7e39b0f909eda6e25a4ec || :
 %make_install
 
 %files

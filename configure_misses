@@ -1,9 +1,9 @@
+Configure miss: Mac OS X Cocoa support
+Configure miss: clang-format
+Configure miss: clang-format-3.7
+Configure miss: clang-format-3.8
+Configure miss: clang-format-3.9
 Configure miss: if g++ -std=c++11 static flag -static works
 Configure miss: native Windows host
-Configure miss: Mac OS X Cocoa support
-Configure miss: whether we are using SUN CC compiler
 Configure miss: non-standard Sun libCstd reverse_iterator
-Configure miss: clang-format
-Configure miss: clang-format-3.9
-Configure miss: clang-format-3.8
-Configure miss: clang-format-3.7
+Configure miss: whether we are using SUN CC compiler
